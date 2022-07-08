@@ -6,20 +6,27 @@
     android:layout_height="match_parent"
     android:padding="@dimen/screen_padding"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="center|top"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editText"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputTextId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/enter_text_to_be_saved" />
+        android:layout_marginTop="@dimen/view_spacing"
+        android:hint="@string/enter_text_to_be_saved">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnSaveId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="@dimen/view_spacing"
         android:text="@string/save"/>
 
     <Button
@@ -27,5 +34,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/show" />
+
+    <TextView
+        android:id="@+id/txtOutputId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/view_spacing"
+        android:gravity="center"/>
 
 </LinearLayout>

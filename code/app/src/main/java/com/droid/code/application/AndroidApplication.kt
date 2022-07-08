@@ -1,4 +1,4 @@
-package com.droid.code
+package com.droid.code.application
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

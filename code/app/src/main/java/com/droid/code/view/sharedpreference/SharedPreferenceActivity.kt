@@ -1,4 +1,4 @@
-package com.droid.code.view
+package com.droid.code.view.sharedpreference
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,17 +8,14 @@ import androidx.lifecycle.ViewModelProvider
 import com.droid.code.R
 import com.droid.code.databinding.ActivityMainBinding
 import com.droid.code.utils.hideSoftInput
-import com.droid.code.vm.MainActivityVm
-import com.droid.preference.sharedPreferences.domain.Preferences
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class SharedPreferenceActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var viewModel: MainActivityVm
+    private lateinit var viewModel: SharedPreferenceVm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +52,6 @@ class MainActivity : AppCompatActivity() {
         binding.txtOutputId.text = textToShow
     }
 
-    private fun initViewModel() { viewModel = ViewModelProvider(this).get(MainActivityVm::class.java) }
+    private fun initViewModel() { viewModel = ViewModelProvider(this).get(SharedPreferenceVm::class.java) }
 
 }

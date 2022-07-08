@@ -1,7 +1,0 @@
-ext {
-    def hiltVersion = "2.40"
-    hiltDependencies = [
-            hilt_android          : "com.google.dagger:hilt-android:$hiltVersion",
-            hilt_android_compiler : "com.google.dagger:hilt-android-compiler:$hiltVersion"
-    ]
-}

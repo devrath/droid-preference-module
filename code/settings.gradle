@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "code"
 include ':app'
-include ':preference'
+include ':core'
+include ':core:preference'
+include ':core:di'
+

@@ -46,5 +46,7 @@ dependencies {
 
 
     implementation project(path: ':core:preference')
+    implementation project(path: ':core:repository')
+
 
 }

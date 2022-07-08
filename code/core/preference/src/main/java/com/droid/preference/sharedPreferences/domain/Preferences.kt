@@ -1,4 +1,4 @@
-package com.droid.preference.domain
+package com.droid.preference.sharedPreferences.domain
 
 interface Preferences {
 

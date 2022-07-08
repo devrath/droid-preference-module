@@ -1,7 +1,7 @@
-package com.droid.preference.data
+package com.droid.preference.sharedPreferences.data
 
 import android.content.SharedPreferences
-import com.droid.preference.domain.Preferences
+import com.droid.preference.sharedPreferences.domain.Preferences
 
 class DefaultPreferences(
     private val sharedPref: SharedPreferences

@@ -43,4 +43,7 @@ dependencies {
     // -----> Hilt dependency
     implementation hiltDependencies.hilt_android
     kapt hiltDependencies.hilt_android_compiler
+
+    // -----> DataStore Preferences
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
 }

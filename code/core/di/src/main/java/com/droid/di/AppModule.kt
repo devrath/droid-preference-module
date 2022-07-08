@@ -3,8 +3,8 @@ package com.droid.di
 import android.app.Application
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
-import com.droid.preference.data.DefaultPreferences
-import com.droid.preference.domain.Preferences
+import com.droid.preference.sharedPreferences.data.DefaultPreferences
+import com.droid.preference.sharedPreferences.domain.Preferences
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -24,4 +24,4 @@ include ':app'
 include ':core'
 include ':core:preference'
 include ':core:di'
-
+include ':core:repository'

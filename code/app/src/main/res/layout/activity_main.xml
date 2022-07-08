@@ -7,7 +7,7 @@
     android:padding="@dimen/screen_padding"
     android:orientation="vertical"
     android:gravity="center|top"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputTextId"

@@ -15,6 +15,21 @@ This repository is used to demonstrate how to use the preference module in andro
 ---
 ![Banner](https://github.com/devrath/droid-preference-module/blob/main/assets/block_diagram.drawio.png)
 
+---
+
+## What is a preference module
+* We use the preference module to store `key/value` pairs in android. 
+* These are data that are small that dosen't need a local database but needed to be stored so that htey can be retrieved later after app kill and relaunch.
+
+## Challenges usually we face in a large project 
+* Sometimes whent the code repository is large and there are lot of developers have worked on the same piece of code the shared preference API is directly refered in the `view-model` , `activity`, `fragment`. 
+* This reduces the testability of the project.
+
+## Improving the structuring 
+* Having the clean architecture reduces lot of problems by decoupling the code 
+
+
+
 
 <p align="center">
 <a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>

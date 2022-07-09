@@ -1,8 +1,4 @@
 # droid-preference-module
-This repository is used to demonstrate how to use the preference module in android also keeping in the mind API used to store it can be switched in future 
-
-
-# droid-preference-module
 ![Banner](https://github.com/devrath/devrath/blob/master/images/Banner.png)
 This repository is used to demonstrate how to use the preference module in android with multi modularity
 

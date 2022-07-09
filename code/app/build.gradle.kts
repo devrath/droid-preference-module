@@ -50,6 +50,13 @@ dependencies {
     implementation(DaggerHilt.hiltAndroid)
     kapt(DaggerHilt.hiltCompiler)
 
+    kapt(LifeCycle.lifeCycleCompiler)
+    implementation(LifeCycle.lifecycleViewModelKtx)
+    implementation(LifeCycle.lifecycleLiveDataKtx)
+    implementation(LifeCycle.lifecycleRuntimeKtx)
+    implementation(LifeCycle.lifecycleViewModelSavedState)
+    implementation(LifeCycle.lifecycleCommonJava8)
+
     implementation(project(Modules.corePreference))
     implementation(project(Modules.coreDi))
     implementation(project(Modules.coreRepository))

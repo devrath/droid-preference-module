@@ -36,6 +36,13 @@ dependencies {
     kapt DaggerHilt.hiltCompiler
     implementation DaggerHilt.hiltAndroid
 
+    kapt LifeCycle.lifeCycleCompiler
+    implementation LifeCycle.lifecycleViewModelKtx
+    implementation LifeCycle.lifecycleLiveDataKtx
+    implementation LifeCycle.lifecycleRuntimeKtx
+    implementation LifeCycle.lifecycleViewModelSavedState
+    implementation LifeCycle.lifecycleCommonJava8
+
     testImplementation Testing.junit4
     testImplementation Testing.junitAndroidExt
     testImplementation Testing.truth

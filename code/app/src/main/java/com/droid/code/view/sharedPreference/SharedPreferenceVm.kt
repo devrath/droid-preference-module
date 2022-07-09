@@ -21,8 +21,13 @@ class SharedPreferenceVm @Inject constructor(
 
     fun saveAction(text: String) {
         repositoryPreferences.saveTextFromPreferences(text)
+        _viewState.value = SharedPreferenceViewStates.DataSaved
     }
 
-    fun displayText() = repositoryPreferences.getTextFromPreferences()
+    fun displayText() {
+        repositoryPreferences.getTextFromPreferences()?.let {
+            _viewState.value = SharedPreferenceViewStates.DataShown(it)
+        }
+    }
 
 }

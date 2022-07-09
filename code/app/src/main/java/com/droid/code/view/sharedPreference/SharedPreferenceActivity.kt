@@ -5,9 +5,14 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import com.droid.code.R
 import com.droid.code.databinding.ActivityMainBinding
+import com.droid.code.states.SharedPreferenceViewStates
 import com.droid.code.utils.hideSoftInput
+import com.droid.code.utils.showToast
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.InternalCoroutinesApi
 
 @AndroidEntryPoint
 class SharedPreferenceActivity : AppCompatActivity() {
@@ -21,8 +26,9 @@ class SharedPreferenceActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setToolbarBackAction()
-        initViewModel();
+        initViewModel()
         setOnClickListeners()
+        setupObserver()
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -30,10 +36,23 @@ class SharedPreferenceActivity : AppCompatActivity() {
         return true
     }
 
+    private fun setViewState(it: SharedPreferenceViewStates) {
+        when(it){
+            is SharedPreferenceViewStates.DataSaved -> showToast(resources.getString(R.string.saved))
+            is SharedPreferenceViewStates.DataShown -> binding.txtOutputId.text = it.message
+        }
+    }
+
+    /**
+     * TOOLBAR back action for the screen
+     */
     private fun setToolbarBackAction() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
+    /**
+     * Set on click listeners and text change listeners
+     */
     private fun setOnClickListeners() {
         binding.apply {
             inputTextId.editText?.doOnTextChanged { inputText, _, _, _ -> inputTextAction() }
@@ -42,23 +61,36 @@ class SharedPreferenceActivity : AppCompatActivity() {
         }
     }
 
-    private fun inputTextAction() { displayText("") }
+    /**
+     * INPUT:-> Edit text actions
+     */
+    private fun inputTextAction() {  binding.txtOutputId.text = "" }
 
+    /**
+     * ACTION:-> Saving data for the shared preferences
+     */
     private fun saveAction(view: View) {
         view.hideSoftInput()
-        val textToSave = binding.inputTextId.editText?.text.toString()
-        viewModel.saveAction(textToSave)
+        viewModel.saveAction(binding.inputTextId.editText?.text.toString())
     }
 
+    /**
+     * ACTION:-> Showing data from the shared preferences
+     */
     private fun showAction(view: View) {
         view.hideSoftInput()
-        displayText(viewModel.displayText())
+        viewModel.displayText()
     }
 
-    private fun displayText(textToShow: String?) {
-        binding.txtOutputId.text = textToShow
-    }
-
+    /**
+     * Initialize the view model for the current screen
+     */
     private fun initViewModel() { viewModel = ViewModelProvider(this).get(SharedPreferenceVm::class.java) }
 
+    /**
+     * Set the observer for the view states from view model
+     */
+    private fun setupObserver() {
+        lifecycleScope.launchWhenStarted { viewModel.viewState.collect { setViewState(it) } }
+    }
 }

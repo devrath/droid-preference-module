@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">code</string>
     <string name="save">Save</string>
+    <string name="saved">Saved</string>
     <string name="show">Show</string>
     <string name="enter_text_to_be_saved">Enter text to be saved</string>
     <string name="steps">1. Save the value using Shared Prefs \n 2. Use migration to migrate \n 3. Use Data store to modify preferences</string>

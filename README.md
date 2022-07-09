@@ -34,6 +34,15 @@ This repository is used to demonstrate how to use the preference module in andro
 * Rather than directly calling the `shared preference` library we should call a interfce and inturn implementtion is called by class that implements the interface
 * Using this its easier to decople the entire `preference-logic` and say tomorrow if needed we can migrate to a different implementation(this is demonstrated in the project also by migrating from shared preferences to data store)
 
+### Project Structure
+<p align="center">
+<a><img src="https://github.com/devrath/droid-preference-module/blob/main/assets/structure_snippets/1.png" width="290" height="320"></a>
+<a><img src="https://github.com/devrath/droid-preference-module/blob/main/assets/structure_snippets/2.png" width="290" height="320"></a>
+<a><img src="https://github.com/devrath/droid-preference-module/blob/main/assets/structure_snippets/3.png" width="290" height="320"></a>
+<a><img src="https://github.com/devrath/droid-preference-module/blob/main/assets/structure_snippets/4.png" width="290" height="320"></a>
+<a><img src="https://github.com/devrath/droid-preference-module/blob/main/assets/structure_snippets/5.png" width="270" height="320"></a>
+<a><img src="https://github.com/devrath/droid-preference-module/blob/main/assets/structure_snippets/6.png" width="290" height="320"></a>
+</p>
 
 ### Demo preview of project 
 <p align="center">

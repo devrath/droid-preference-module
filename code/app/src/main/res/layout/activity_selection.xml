@@ -28,13 +28,6 @@
         android:text="@string/save_with_shared_preferences"/>
 
     <Button
-        android:id="@+id/btnMigrateId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/migrate_to_data_store" />
-
-
-    <Button
         android:id="@+id/btnDataStoreId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

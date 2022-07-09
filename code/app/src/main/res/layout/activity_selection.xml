@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="@dimen/screen_padding"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".view.sharedPreference.SharedPreferenceActivity">
+
+    <TextView
+        android:id="@+id/txtOutputId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="@string/steps"
+        android:layout_marginTop="@dimen/view_spacing"
+        android:gravity="center|left"/>
+
+
+    <Button
+        android:id="@+id/btnSharedPrefsId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_spacing"
+        android:text="@string/save_with_shared_preferences"/>
+
+    <Button
+        android:id="@+id/btnMigrateId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/migrate_to_data_store" />
+
+
+    <Button
+        android:id="@+id/btnDataStoreId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modify_with_data_store" />
+
 
 </LinearLayout>

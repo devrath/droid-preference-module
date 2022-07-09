@@ -1,11 +1,10 @@
-package com.droid.code.view.sharedpreference
+package com.droid.code.view.sharedPreference
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.ViewModelProvider
-import com.droid.code.R
 import com.droid.code.databinding.ActivityMainBinding
 import com.droid.code.utils.hideSoftInput
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,12 +18,20 @@ class SharedPreferenceActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        // Initialize the view model
+        setToolbarBackAction()
         initViewModel();
         setOnClickListeners()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    private fun setToolbarBackAction() {
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun setOnClickListeners() {

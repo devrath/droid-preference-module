@@ -1,8 +1,7 @@
-package com.droid.code.view.sharedpreference
+package com.droid.code.view.sharedPreference
 
 import android.app.Application
-import android.view.View
-import com.droid.code.states.WebViewGameActivityStates
+import com.droid.code.states.SharedPreferenceViewStates
 import com.droid.code.utils.BaseViewModel
 import com.droid.repository.RepositoryPreferences
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,8 +15,8 @@ class SharedPreferenceVm @Inject constructor(
     private val repositoryPreferences: RepositoryPreferences
 ) : BaseViewModel(context){
 
-    private val _viewState = MutableStateFlow<WebViewGameActivityStates>(
-        WebViewGameActivityStates.InitialState)
+    private val _viewState = MutableStateFlow<SharedPreferenceViewStates>(
+        SharedPreferenceViewStates.InitialState)
     val viewState = _viewState.asStateFlow()
 
     fun saveAction(text: String) {

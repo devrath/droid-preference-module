@@ -8,4 +8,5 @@
     <string name="save_with_shared_preferences">Save with Shared Preferences</string>
     <string name="migrate_to_data_store">Migrate to Data Store</string>
     <string name="modify_with_data_store">Modify with Data Store</string>
+    <string name="m_success">Migration Success</string>
 </resources>

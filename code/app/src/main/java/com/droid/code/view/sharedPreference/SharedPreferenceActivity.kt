@@ -85,7 +85,8 @@ class SharedPreferenceActivity : AppCompatActivity() {
     /**
      * Initialize the view model for the current screen
      */
-    private fun initViewModel() { viewModel = ViewModelProvider(this).get(SharedPreferenceVm::class.java) }
+    private fun initViewModel() { viewModel = ViewModelProvider(this)[SharedPreferenceVm::class.java]
+    }
 
     /**
      * Set the observer for the view states from view model

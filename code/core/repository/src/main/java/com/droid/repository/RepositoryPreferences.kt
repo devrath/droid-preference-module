@@ -1,20 +1,19 @@
 package com.droid.repository
 
 import android.content.Context
-import java.io.IOException
-import com.droid.preference.sharedPreferences.domain.Preferences
+import com.droid.preference.sharedPreferences.domain.AppSharedPreferences
 
 class RepositoryPreferences(
     context: Context,
-    val preferences: Preferences
+    val appSharedPreferences: AppSharedPreferences
 ) {
 
     fun saveTextFromPreferences(textToSave: String) {
-        preferences.saveText(textToSave)
+        appSharedPreferences.saveText(textToSave)
     }
 
     fun getTextFromPreferences(): String? {
-        return preferences.loadText()
+        return appSharedPreferences.loadText()
     }
 
 }

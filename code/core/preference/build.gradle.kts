@@ -4,5 +4,6 @@ apply {
 
 dependencies {
     // -----> DataStore Preferences
-    //implementation("androidx.datastore:datastore-preferences:1.0.0")
+    "implementation"(DataStorePreferences.datastorePreferences)
+    "implementation"(AndroidX.coreKtx)
 }

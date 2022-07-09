@@ -1,13 +1,9 @@
 package com.droid.preference.sharedPreferences.domain
 
-interface Preferences {
+interface AppSharedPreferences {
 
     fun saveText(text: String)
 
     fun loadText() : String?
-
-    companion object {
-        const val KEY_TEXT = "key_text"
-    }
 
 }

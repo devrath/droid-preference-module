@@ -1,7 +1,9 @@
 package com.droid.di
 
 import android.content.Context
-import com.droid.preference.sharedPreferences.domain.Preferences
+import com.droid.preference.datastore.domain.AppDatastore
+import com.droid.preference.sharedPreferences.domain.AppSharedPreferences
+import com.droid.repository.RepositoryDatastore
 import com.droid.repository.RepositoryPreferences
 import dagger.Module
 import dagger.Provides
@@ -18,7 +20,15 @@ object RepositoryModule {
     @Singleton
     fun provideRepositoryPreferences(
         @ApplicationContext context: Context,
-        preferences: Preferences
-    ) = RepositoryPreferences(context = context,preferences=preferences)
+        appSharedPreferences: AppSharedPreferences
+    ) = RepositoryPreferences(context = context,appSharedPreferences=appSharedPreferences)
+
+
+    @Provides
+    @Singleton
+    fun provideRepositoryDatastore(
+        @ApplicationContext context: Context,
+        store: AppDatastore
+    ) = RepositoryDatastore(context = context, appDatastore = store)
 
 }

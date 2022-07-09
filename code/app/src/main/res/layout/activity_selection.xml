@@ -6,8 +6,18 @@
     android:layout_height="match_parent"
     android:padding="@dimen/screen_padding"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="center|top"
     tools:context=".view.sharedPreference.SharedPreferenceActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/img_selection_size"
+        android:layout_height="@dimen/img_selection_size"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/img_margin"
+        android:layout_marginTop="@dimen/img_margin"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/mobile"/>
 
     <TextView
         android:id="@+id/txtOutputId"

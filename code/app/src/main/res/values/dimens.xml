@@ -2,4 +2,8 @@
 <resources>
     <dimen name="screen_padding">20dp</dimen>
     <dimen name="view_spacing">44dp</dimen>
+    <dimen name="img_selection_size">200dp</dimen>
+    <dimen name="img_margin">12dp</dimen>
+    <dimen name="img_margin_module">4dp</dimen>
+    <dimen name="img_module_size">100dp</dimen>
 </resources>

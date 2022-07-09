@@ -47,6 +47,7 @@ android {
 }
 
 dependencies {
+    implementation(Lotte.lotteLib)
     implementation(DaggerHilt.hiltAndroid)
     kapt(DaggerHilt.hiltCompiler)
 

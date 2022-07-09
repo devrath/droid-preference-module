@@ -9,6 +9,16 @@
     android:padding="@dimen/screen_padding"
     tools:context=".view.sharedPreference.SharedPreferenceActivity">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/img_module_size"
+        android:layout_height="@dimen/img_module_size"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/img_margin_module"
+        android:layout_marginTop="@dimen/img_margin_module"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/android"/>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputTextId"
         android:layout_width="match_parent"

@@ -34,6 +34,23 @@ This repository is used to demonstrate how to use the preference module in andro
 * Rather than directly calling the `shared preference` library we should call a interfce and inturn implementtion is called by class that implements the interface
 * Using this its easier to decople the entire `preference-logic` and say tomorrow if needed we can migrate to a different implementation(this is demonstrated in the project also by migrating from shared preferences to data store)
 
+---
+#### What is Data Store
+* Datastore is a component of data storage solution from the android jetpack.
+* It allows us to store the `key/value` pairs like shared preferences or typed objects with protocol buffers.
+* Data store uses kotlin, coroutines, and flow to store data asynchronously with consistency and transaction support
+
+#### Why use datastore when we already have shared preferences
+* `Shared Preferences` are `synchronous` and not main thread-safe, But data store is safe to use in the main thread since it uses `Dispatchers.IO` under the hood.
+* `Shared Preferences` are not safe from runtime exceptions, But the `Data-Store` is safe from runtime exceptions
+* There is an easy way to migrate from `Shared Preferences`
+
+
+### About the project
+* We have a three screen project which is multimodular in anture
+* Forst screen we select whetehr we want to save the data usin g `shared preferences` or `data store` 
+* As shown in demo we save the data in `shared preferences` and then we migrate into the `data store` and then edit into a new data and save it again using `data-store`
+
 ### Demo preview of project 
 <p align="center">
 <a><img src="/assets/recording.gif" width="320" height="660"/></a>

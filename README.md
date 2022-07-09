@@ -30,7 +30,7 @@ This repository is used to demonstrate how to use the preference module in andro
 * Using the `dependency injection` also helps in promoting code towards modularity and makes life much simpler by generating the code behind the scenes so that android developer dosen't have to spend writing that code and can focus on code structure more.
 
 ## Using shared preference with proper pattern
-* Rater than directly calling the `shared preference` library we should call a interfce and inturn implementtion is called by class that implements the interface
+* Rather than directly calling the `shared preference` library we should call a interfce and inturn implementtion is called by class that implements the interface
 * Using this its easier to decople the entire `preference-logic` and say tomorrow if needed we can migrate to a different implementation(this is demonstrated in the project also by migrating from shared preferences to data store)
 
 

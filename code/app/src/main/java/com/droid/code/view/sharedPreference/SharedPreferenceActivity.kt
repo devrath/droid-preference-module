@@ -7,7 +7,7 @@ import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.droid.code.R
-import com.droid.code.databinding.ActivityMainBinding
+import com.droid.code.databinding.ActivitySharedPreferenceBinding
 import com.droid.code.states.SharedPreferenceViewStates
 import com.droid.code.utils.hideSoftInput
 import com.droid.code.utils.showToast
@@ -17,13 +17,13 @@ import kotlinx.coroutines.InternalCoroutinesApi
 @AndroidEntryPoint
 class SharedPreferenceActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivitySharedPreferenceBinding
 
     private lateinit var viewModel: SharedPreferenceVm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivitySharedPreferenceBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setToolbarBackAction()
         initViewModel()

@@ -9,6 +9,7 @@ import com.droid.code.databinding.ActivitySelectionBinding
 import com.droid.code.states.SelectionViewStates
 import com.droid.code.utils.showToast
 import com.droid.code.utils.startActivity
+import com.droid.code.view.dataStore.DataStoreActivity
 import com.droid.code.view.sharedPreference.SharedPreferenceActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -35,7 +36,7 @@ class SelectionActivity : AppCompatActivity()  {
         binding.apply {
             btnSharedPrefsId.setOnClickListener { startActivity<SharedPreferenceActivity>() }
             btnMigrateId.setOnClickListener { viewModel.initiateMigration() }
-            btnDataStoreId.setOnClickListener { startDataStoreScreen() }
+            btnDataStoreId.setOnClickListener { startActivity<DataStoreActivity>() }
         }
     }
 

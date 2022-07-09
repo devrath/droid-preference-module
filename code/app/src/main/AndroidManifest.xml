@@ -9,7 +9,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/str_selection"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Code"
@@ -24,8 +24,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.sharedPreference.SharedPreferenceActivity"/>
-        <activity android:name=".view.dataStore.DataStoreActivity"/>
+        <activity android:name=".view.sharedPreference.SharedPreferenceActivity"
+            android:label="@string/str_shared_prefs" />
+        <activity android:name=".view.dataStore.DataStoreActivity"
+            android:label="@string/str_data_store"/>
 
     </application>
 

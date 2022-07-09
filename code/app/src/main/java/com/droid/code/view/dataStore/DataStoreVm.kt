@@ -20,5 +20,15 @@ class DataStoreVm @Inject constructor(
     val viewState = _viewState.asStateFlow()
 
 
+    fun saveAction(text: String) {
+        //repositoryPreferences.saveTextFromPreferences(text)
+        _viewState.value = DataStoreViewStates.DataSaved
+    }
+
+    fun displayText() {
+        /*repositoryPreferences.getTextFromPreferences()?.let {
+            _viewState.value = DataStoreViewStates.DataShown(it)
+        }*/
+    }
 
 }

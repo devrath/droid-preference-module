@@ -47,7 +47,7 @@ This repository is used to demonstrate how to use the preference module in andro
 
 
 ### About the project
-* We have a three screen project which is multimodular in anture
+* We have a three screen project which is multimodular in nature
 * Forst screen we select whetehr we want to save the data usin g `shared preferences` or `data store` 
 * As shown in demo we save the data in `shared preferences` and then we migrate into the `data store` and then edit into a new data and save it again using `data-store`
 

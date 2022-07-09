@@ -35,6 +35,10 @@ This repository is used to demonstrate how to use the preference module in andro
 * Using this its easier to decople the entire `preference-logic` and say tomorrow if needed we can migrate to a different implementation(this is demonstrated in the project also by migrating from shared preferences to data store)
 
 
+### Demo preview of project 
+<p align="center">
+<a><img src="/assets/recording.gif" width="320" height="660"/></a>
+</p>
 
 <p align="center">
 <a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>

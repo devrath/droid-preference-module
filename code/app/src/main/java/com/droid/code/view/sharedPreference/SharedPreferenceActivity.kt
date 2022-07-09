@@ -39,7 +39,7 @@ class SharedPreferenceActivity : AppCompatActivity() {
     private fun setViewState(it: SharedPreferenceViewStates) {
         when(it){
             is SharedPreferenceViewStates.DataSaved -> showToast(resources.getString(R.string.saved))
-            is SharedPreferenceViewStates.DataShown -> binding.txtOutputId.text = it.message
+            is SharedPreferenceViewStates.DataShown -> binding.viewContainerId.txtOutputId.text = it.message
         }
     }
 
@@ -54,7 +54,7 @@ class SharedPreferenceActivity : AppCompatActivity() {
      * Set on click listeners and text change listeners
      */
     private fun setOnClickListeners() {
-        binding.apply {
+        binding.viewContainerId.apply {
             inputTextId.editText?.doOnTextChanged { inputText, _, _, _ -> inputTextAction() }
             btnSaveId.setOnClickListener { saveAction(it) }
             btnShowId.setOnClickListener { showAction(it) }
@@ -64,14 +64,14 @@ class SharedPreferenceActivity : AppCompatActivity() {
     /**
      * INPUT:-> Edit text actions
      */
-    private fun inputTextAction() {  binding.txtOutputId.text = "" }
+    private fun inputTextAction() {  binding.viewContainerId.txtOutputId.text = "" }
 
     /**
      * ACTION:-> Saving data for the shared preferences
      */
     private fun saveAction(view: View) {
         view.hideSoftInput()
-        viewModel.saveAction(binding.inputTextId.editText?.text.toString())
+        viewModel.saveAction(binding.viewContainerId.inputTextId.editText?.text.toString())
     }
 
     /**

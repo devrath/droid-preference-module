@@ -7,6 +7,8 @@ This repository is used to demonstrate how to use the preference module in andro
 <a><img src="https://img.shields.io/badge/Kotlin--Dsl-For--Dependencies-red"></a>
 <a><img src="https://img.shields.io/badge/Hilt-Dependency%20Injection-green"></a>
 <a><img src="https://img.shields.io/badge/Architecture-Clean%20Architecture-pink"></a>
+<a><img src="https://img.shields.io/badge/Jetpack-Data%20Store-blue"></a>
+<a><img src="https://img.shields.io/badge/Store%20Data-Shared%20Preferences-purple"></a>
 </p>
 
 
